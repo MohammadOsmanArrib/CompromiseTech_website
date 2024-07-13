@@ -13,12 +13,36 @@ Route::get('/', function(){
 return Inertia::render('Home');
 });
 
-Route::get('/contact', function () {
-    return Inertia::render('Contact');
-});
-
 Route::get('/about', function () {
     return Inertia::render('About');
+});
+
+Route::get('/services', function () {
+    return Inertia::render('Services');
+});
+Route::get('/service1', function () {
+    return Inertia::render('Service1');
+});
+Route::get('/service2', function () {
+    return Inertia::render('Service2');
+});
+Route::get('/service3', function () {
+    return Inertia::render('Service3');
+});
+Route::get('/service4', function () {
+    return Inertia::render('Service4');
+});
+
+Route::get('/portfolio', function () {
+    return Inertia::render('Portfolio');
+});
+
+Route::get('/blog', function () {
+    return Inertia::render('Blog');
+});
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
 });
 
 //Authenticated users route

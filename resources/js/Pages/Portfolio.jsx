@@ -1,14 +1,14 @@
 import { Link, Head } from '@inertiajs/react';
 import Layout from '@/Layouts/Layout';
 
-export default function About (){
+export default function Portfolio (){
 
     return (
 
         <Layout>
-            <Head title="About" />
-              <div>
-                 <h1>Welcome to <b>About</b> page</h1>
+            <Head title="Portfolio" />
+            <div>
+                 <h1>Welcome to <b>Portfolio</b> page</h1>
             </div>
             
         </Layout>
