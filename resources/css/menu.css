@@ -1,28 +1,102 @@
-/* The below CSS code is got from figma (menu) */
-.menu-box {
-/* Group 774 */
-/* position: absolute; 
-width: 1920px;
-height: 130px;
-left: 0px;
-top: 0px;*/
-background: linear-gradient(270deg, #F3EEE8 0%, #EBEDF5 100%);
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1920px;
+    height: 75px;
+    left: 0px;
+    top: 0.5px;
+    background: linear-gradient(270deg, #F3EEE8 0%, #EBEDF5 100%);
 }
 
-/* Group 702 */
-.logo_top {
-
-width: 261px;
-height: 63.65px;
-left: 196px;
-top: 33px;
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
-/* Frame */
-.frame_logo {
+.menu-list {
+    display: flex;
+    list-style: none;
+    padding: 10;
+    margin-left: 500px;
+}
+
+.menu-list li {
+    margin-right: 30px;
+    position: relative;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-menu {
+    display: none;
     position: absolute;
-    width: 261px;
-    height: 63.65px;
-    left: 196px;
-    top: 33px;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown-menu li a {
+    color: black;
+}
+
+.dropdown-menu.open {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        border-top: 1px solid #ccc;
+    }
+
+    .menu-list.open {
+        display: flex;
+    }
+
+    .menu-list li {
+        margin: 0;
+        border-bottom: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .menu-list li a {
+        color: black;
+    }
+
+    .dropdown-menu {
+        position: static;
+        border: none;
+        padding-left: 20px;
+    }
+
+    .dropdown-menu li {
+        border: none;
+        padding: 5px 10px;
+    }
 }

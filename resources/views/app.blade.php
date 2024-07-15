@@ -16,8 +16,7 @@
         @inertiaHead
     </head>
 
-    <body style="background-color:gray;" class="font-sans antialiased">
+    <body style="background-color:linear-gradient(270deg, #F3EEE8 0%, #EBEDF5 100%);" class="font-sans antialiased">
         @inertia
-        
     </body>
 </html>

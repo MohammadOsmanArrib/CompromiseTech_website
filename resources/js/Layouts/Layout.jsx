@@ -12,7 +12,9 @@ export default function Layout({children}) {
                  <Menu />  
             </header>
 
-            {children}
+            <main>{children}
+                
+            </main>
 
             <footer>
                 

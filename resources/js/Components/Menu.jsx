@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Head } from '@inertiajs/react';
 import '../../css/menu.css';
 import '../../css/app.css';
 
+
 const Menu = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
     return (
-        <div className='menu-box'>
-            <div className=''>
+        <div className='menu'>
+            <div className="menu-toggle" onClick={toggleMenu}>
+                ☰ 
+            </div>
                 <nav>
-                <ul>
+                <ul className={`menu-list ${isOpen ? 'open' : ''}`}>
                     <li className='home'><Link href="/">Home</Link></li>
                     <li><Link href="/about">About Us</Link></li>
-                    <li><Link href="/services">Services</Link></li>
-                    <ul className='sub-menu'>
-                            <li><Link href="/service1">Service1</Link></li>
-                            <li><Link href="/service2">Service2</Link></li>
-                            <li><Link href="/service3">Service3</Link></li>
-                            <li><Link href="/service4">Service4</Link></li>
+                <li className="dropdown">
+                    <a href="#" onClick={toggleDropdown}>Services</a>
+                    <ul className={`dropdown-menu ${isDropdownOpen ? 'open' : ''}`}>
+                            <li><Link href="service1">Service1</Link></li>
+                            <li><Link href="service2">Service2</Link></li>
+                            <li><Link href="service3">Service3</Link></li>
+                            <li><Link href="service4">Service4</Link></li>
                     </ul>
+                </li>
 
                     <li><Link href="/portfolio">Portfolio</Link></li>
                     <li><Link href="/blog">Blog</Link></li>
@@ -27,7 +43,6 @@ const Menu = () => {
                     <li><Link href="/register">Register</Link></li>
                 </ul>
                 </nav>
-            </div>
         </div>
     );
 };
