@@ -3,11 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1920px;
+    width: 100%; /* Changed to 100% for responsiveness */
     height: 75px;
-    left: 0px;
+    left: 0;
     top: 0.5px;
     background: linear-gradient(270deg, #F3EEE8 0%, #EBEDF5 100%);
+    padding: 0 20px; /* Added padding for better spacing */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 .menu-toggle {
@@ -19,8 +21,8 @@
 .menu-list {
     display: flex;
     list-style: none;
-    padding: 10;
-    margin-left: 500px;
+    padding: 0; /* Adjusted padding */
+    margin: 0; /* Reset margin */
 }
 
 .menu-list li {
@@ -60,6 +62,11 @@
 }
 
 @media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -67,10 +74,10 @@
     .menu-list {
         display: none;
         flex-direction: column;
+        width: 100%; /* Full width for mobile */
         position: absolute;
-        top: 100%;
+        top: 75px; /* Adjusted to be below the menu bar */
         left: 0;
-        right: 0;
         background-color: white;
         border-top: 1px solid #ccc;
     }
@@ -82,11 +89,14 @@
     .menu-list li {
         margin: 0;
         border-bottom: 1px solid #ccc;
-        padding: 10px;
+        padding: 12px;
+        width: 100%; /* Full width for list items */
     }
 
     .menu-list li a {
         color: black;
+        width: 100%;
+        display: block; /* Ensure full width clickable area */
     }
 
     .dropdown-menu {
