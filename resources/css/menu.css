@@ -60,15 +60,60 @@
 .dropdown-menu.open {
     display: block;
 }
+.menu .dropdown > a {
+    position: relative;
+    padding-right: 15px; 
+}
+
+.menu .dropdown > a::after {
+    content: '✔'; /* Tick mark character */
+    position: absolute;
+    right: 0px; 
+    top: -4%; 
+    left: 85%;
+    /*transform: translateY(-50%);*/
+    font-size: 12px; 
+    color: #4B5563; 
+}
+
 
 @media (max-width: 768px) {
     .menu {
         flex-direction: column;
         align-items: flex-start;
+        position: relative; /* Ensure the menu has a relative position for absolute positioning of the toggle button */
     }
 
     .menu-toggle {
         display: block;
+        position: absolute; /* Use absolute positioning to place it within the menu */
+        right: 10px; /* Adjust the value to move it to the right */
+        top: 20px; /* Adjust the value to move it down */
+    }
+
+    .menu-list li:hover {
+        background-color: #6B3511; /* Change color on hover */
+    }
+
+    
+    .all-menu li:hover {
+        background-color: #6B3511; /* Change this to your desired hover color */
+    }
+  
+
+    .menu-list > li a {
+        text-decoration: none;
+        color: #000; /* Default text color */
+        transition: color 0.3s ease;
+    }
+    
+    .menu-list > li:hover > a {
+        color: #fff; /* Change this to white on hover */
+    }
+
+
+    .all-menu li a {
+        color: #000; /* Default text color */
     }
 
     .menu-list {
@@ -80,6 +125,7 @@
         left: 0;
         background-color: white;
         border-top: 1px solid #ccc;
+        
     }
 
     .menu-list.open {
@@ -105,8 +151,23 @@
         padding-left: 20px;
     }
 
+    .dropdown-menu > li:hover > a {
+        color: #fff; /* Change this to white on hover */
+    }
+
     .dropdown-menu li {
         border: none;
         padding: 5px 10px;
+        color: #000; /* Default text color */
     }
+
+    .dropdown-menu li a {
+        color: #000; /* Default text color */
+    }
+
 }
+
+
+
+
+
