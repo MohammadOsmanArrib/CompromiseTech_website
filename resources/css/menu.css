@@ -3,14 +3,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Changed to 100% for responsiveness */
-    height: 75px;
+    width: 100%;
+    height: 80px;
     left: 0;
     top: 0.5px;
     background: linear-gradient(270deg, #F3EEE8 0%, #EBEDF5 100%);
-    padding: 0 20px; /* Added padding for better spacing */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    padding: 0 80px;
+    box-sizing: border-box;
 }
+
+.logo {
+    position: absolute;
+    width: 200px;
+    height: 63.65px;
+    left: 120px;
+    top: 15px !important;
+    }
 
 .menu-toggle {
     display: none;
@@ -23,6 +31,9 @@
     list-style: none;
     padding: 0; /* Adjusted padding */
     margin: 0; /* Reset margin */
+    margin-left: 700px;
+    font-size: large;
+    margin-top: 15px;
 }
 
 .menu-list li {
@@ -32,8 +43,31 @@
 
 .menu-list li a {
     text-decoration: none;
-    color: black;
+    color: #111827;
+    font-weight: bold;
+    font-family: Space Grotesk;
 }
+
+.menu-list li.contactus a {
+    color: #ffffff !important;
+}
+
+.contactus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 26px;
+    gap: 10px;
+    position: absolute;
+    font-size: large;
+    top: -8px;
+    left: 15px;
+    /* Primary 3/Brown. 500 */
+    background: #864215;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 106px;
+    }
 
 .dropdown-menu {
     display: none;
@@ -50,7 +84,6 @@
 
 .dropdown-menu li {
     padding: 10px;
-    border-bottom: 1px solid #ccc;
 }
 
 .dropdown-menu li a {
@@ -66,22 +99,25 @@
 }
 
 .menu .dropdown > a::after {
-    content: '✔'; /* Tick mark character */
+    content: "✔"; /* Tick mark character */
     position: absolute;
     right: 0px; 
     top: -4%; 
     left: 85%;
     /*transform: translateY(-50%);*/
     font-size: 12px; 
-    color: #4B5563; 
+    color: #4B5563 !important; 
 }
 
-
 @media (max-width: 768px) {
+
+    .logo {
+        position: static; /* Adjust position for mobile view */
+        margin-bottom: 20px;
+      }
     .menu {
         flex-direction: column;
         align-items: flex-start;
-        position: relative; /* Ensure the menu has a relative position for absolute positioning of the toggle button */
     }
 
     .menu-toggle {
@@ -117,12 +153,9 @@
     }
 
     .menu-list {
-        display: none;
         flex-direction: column;
-        width: 100%; /* Full width for mobile */
-        position: absolute;
-        top: 75px; /* Adjusted to be below the menu bar */
-        left: 0;
+        width: 100%;
+        position: static;
         background-color: white;
         border-top: 1px solid #ccc;
         
@@ -166,8 +199,3 @@
     }
 
 }
-
-
-
-
-

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner_image {
+position: inherit;
+width: 1535px;
+height: 350px;
+left: calc(50% - 1920px/2);
+top: 120px;
+background: linear-gradient(90deg, #203864 31%, rgba(57, 77, 158, 0.2) 100%);
+opacity: 0.95;
+}

@@ -32,6 +32,10 @@ const Menu = () => {
 
     return (
         <div className='menu'>
+                    <div class="logo">
+                        <Link href="/">  <img src="/logo.png" alt="Logo" /></Link>
+                    </div>
+
             <div className="menu-toggle" onClick={toggleMenu}>
                 ☰ 
             </div>
@@ -51,10 +55,10 @@ const Menu = () => {
                         </li>
                         <li><Link href="/portfolio">Portfolio</Link></li>
                         <li><Link href="/blog">Blog</Link></li>
-                        <li><Link href="/contact">Contact Us</Link></li>
+                        <li className="contactus"><Link href="/contact">Contact Us</Link></li>
                         <br></br>
-                        <li><Link href="/login">Login</Link></li>
-                        <li><Link href="/register">Register</Link></li>
+                     {/*   <li><Link href="/login">Login</Link></li>
+                        <li><Link href="/register">Register</Link></li>  */}
                     </ul>
                 </nav>
             </div>
