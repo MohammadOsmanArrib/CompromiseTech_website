@@ -8,7 +8,7 @@ export default function About (){
         <Layout>
             <Head title="About" />
               <div>
-                 <h1>Welcome to <b>About</b> page</h1>
+                 <h1>Welcome to <b>About</b> page -TEST</h1>
             </div>
             
         </Layout>
