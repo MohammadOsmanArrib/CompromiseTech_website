@@ -1,0 +1,6 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=home/compuxhk/new.compromisetech.com
+ - /bin/cp index.html $DEPLOYPATH
+ - /bin/cp app.css $DEPLOYPATH
