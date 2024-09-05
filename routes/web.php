@@ -6,12 +6,16 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Illuminate\Database\Eloquent\Builder;
-
+use App\Models\Banner;
+use App\Http\Controllers\BannerController;
 
 // Route the menu via Inertia-react (No need to route by laravel)
 Route::get('/', function(){
 return Inertia::render('Home');
 });
+
+// Banner route
+Route::get('/', [BannerController::class, 'home_banner']);
 
 Route::get('/about', function () {
     return Inertia::render('About');
